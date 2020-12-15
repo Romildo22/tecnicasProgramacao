@@ -1,7 +1,4 @@
-package metodos;
-
-import operacao.HistoricoBancario;
-import operacao.OperacaoBancaria;
+package Metodos;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -11,7 +8,9 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-import cadastro.Conta;
+import Cadastro.Conta;
+import Operacao.HistoricoBancario;
+import Operacao.OperacaoBancaria;
 
 public class MetodosGerais extends OperacaoBancaria{
 	

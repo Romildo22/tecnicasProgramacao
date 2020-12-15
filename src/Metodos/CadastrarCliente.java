@@ -1,11 +1,11 @@
-package metodos;
-
-import cadastro.Cliente;
-import cadastro.Conta;
+package Metodos;
 
 import java.io.IOException;
 
 import javax.swing.JOptionPane;
+
+import Cadastro.Cliente;
+import Cadastro.Conta;
 
 public class CadastrarCliente {
 
