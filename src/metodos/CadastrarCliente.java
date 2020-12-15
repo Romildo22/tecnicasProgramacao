@@ -7,18 +7,19 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-public class CadastrarCliente extends metodosGerais {
+public class CadastrarCliente {
 
 	public static void main(String[] args)throws IOException  {
 		
 		Cliente cliente = new Cliente();
 		Conta conta = new Conta();
+		MetodosGerais metodos = new MetodosGerais();
 		
 		Long cont = Long.parseLong("1");
 		
 		JOptionPane.showMessageDialog(null, "Para iniciar, vamos cadastrar um novo cliente!");
 		String nomeCliente = JOptionPane.showInputDialog("Digite o nome do cliente");
-		String enderecoCliente = JOptionPane.showInputDialog("Digite o endereço do cliente");
+		String enderecoCliente = JOptionPane.showInputDialog("Digite o endereÃ§o do cliente");
 		
 		cliente.setCodigo(cont);
 		cliente.setNome(nomeCliente);
@@ -30,18 +31,15 @@ public class CadastrarCliente extends metodosGerais {
 		conta.setCliente(cliente);
 		conta.setSaldo(saldoConta);
 		
-		JOptionPane.showMessageDialog(null, "Agora vamos para o tipo de operação que deseja iniciar!");
-		Long tipoOperacao = Long.parseLong(JOptionPane.showInputDialog("Digite 1 para crédito e 2 para débito."));
+		JOptionPane.showMessageDialog(null, "Agora vamos para o tipo de operaÃ§Ã£o que deseja iniciar!");
+		Long tipoOperacao = Long.parseLong(JOptionPane.showInputDialog("Digite : " + "\n" + "1 - para crÃ©dito" + "\n" + "2 - para dÃ©bito." + "\n" + "\n"));
 		Long saldoOperacao = Long.parseLong(JOptionPane.showInputDialog("Agora digite o valor que deseja operar."));
 		
-		setContaCliente(conta);
+		metodos.setContaCliente(conta);
 		
+        metodos.efetuarOperacao(saldoOperacao, conta, tipoOperacao);
 		
-//		efetuarOperacao(saldoOperacao, conta.getCodigo(), tipoOperacao);
-		
-		salvarArquivo();
-		
-		System.out.println("passou");
+		metodos.salvarArquivo();
 		
 		cont++;
 	}
