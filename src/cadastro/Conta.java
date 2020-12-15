@@ -1,15 +1,14 @@
 package cadastro;
 
-public class conta
+public class Conta
 {
-
    private Long codigo;
 
-   private cliente cliente;
+   private Cliente cliente;
 
    private Long saldo;
 
-   public conta(Long codigo, cadastro.cliente cliente, Long saldo)
+   public Conta(Long codigo, Cliente cliente, Long saldo)
    {
       super();
       this.codigo = codigo;
@@ -17,7 +16,7 @@ public class conta
       this.saldo = saldo;
    }
 
-   public conta()
+   public Conta()
    {
       super();
    }
@@ -32,12 +31,12 @@ public class conta
       this.codigo = codigo;
    }
 
-   public cliente getCliente()
+   public Cliente getCliente()
    {
       return cliente;
    }
 
-   public void setCliente(cliente cliente)
+   public void setCliente(Cliente cliente)
    {
       this.cliente = cliente;
    }

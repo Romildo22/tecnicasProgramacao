@@ -1,6 +1,6 @@
 package cadastro;
 
-public class cliente
+public class Cliente
 {
 
    private Long codigo;
@@ -9,7 +9,7 @@ public class cliente
 
    private String endereco;
 
-   public cliente(Long codigo, String nome, String endereco)
+   public Cliente(Long codigo, String nome, String endereco)
    {
       super();
       this.codigo = codigo;
@@ -17,7 +17,7 @@ public class cliente
       this.endereco = endereco;
    }
 
-   public cliente()
+   public Cliente()
    {
       super();
    }
